@@ -12,7 +12,6 @@ var todoschema = mongoose.Schema({
     },
     status: {
         type: String,
-        required: true,
         default: "Active"
     },
     create_date: {
