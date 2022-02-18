@@ -9,15 +9,14 @@ router.get('/', function (req, res) {
     });
 });
 // Import contact controller
-var contactController = require('./contactController');
+var todoListController = require('./todoListController');
 // Contact routes
-router.route('/contacts')
-    .get(contactController.index)
-    .post(contactController.new);
-router.route('/contacts/:contact_id')
-    .get(contactController.view)
-    .patch(contactController.update)
-    .put(contactController.update)
-    .delete(contactController.delete);
+router.route('/todolist')
+    .get(todoListController.index)
+    .post(todoListController.new);
+     router.route('/todolist/:todo_id')
+     .get(todoListController.view)
+     .put(todoListController.update)
+     .delete(todoListController.delete);
 // Export API routes
 module.exports = router;
